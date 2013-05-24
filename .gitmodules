@@ -1,0 +1,3 @@
+[submodule "libs/melonboilerplate"]
+	path = libs/melonboilerplate
+	url = git://github.com/melonjs/boilerplate.git
