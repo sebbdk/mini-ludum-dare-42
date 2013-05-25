@@ -76,6 +76,19 @@ game.PlayerEntity = me.ObjectEntity.extend({
 			}
 		}
 
+		if(!me.game.viewport.shaking) {
+			var enemyEntitys = me.game.getEntityByName('EnemyEntity');
+			for(var c = 0; c < enemyEntitys.length; c++) {
+				var dist = this.distanceTo(enemyEntitys[c]);
+
+				if(dist < 200 ) {
+					me.game.viewport.shake(4, 5, me.game.viewport.AXIS.BOTH);
+				}
+				//console.log("fark!");
+				//console.log(dist);
+			}
+		}
+
 		// update animation if necessary
 		if (this.vel.x !== 0 || this.vel.y !== 0) {
 			// update object animation
