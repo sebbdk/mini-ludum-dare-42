@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" width="20" height="15" tilewidth="32" tileheight="32" backgroundcolor="#4ac6db">
+<map version="1.0" orientation="orthogonal" width="20" height="15" tilewidth="32" tileheight="32">
  <tileset firstgid="1" name="area01_level_tiles" tilewidth="32" tileheight="32">
-  <image source="../../../../assets/img/maps/area01_level_tiles.png" width="640" height="241"/>
+  <image source="../img/maps/area01_level_tiles.png" width="640" height="241"/>
  </tileset>
  <tileset firstgid="141" name="metatiles32x32" tilewidth="32" tileheight="32">
-  <image source="../../../../assets/img/maps/metatiles32x32.png" width="160" height="32"/>
+  <image source="../img/maps/metatiles32x32.png" width="160" height="32"/>
   <tile id="0">
    <properties>
     <property name="type" value="solid"/>
@@ -16,6 +16,18 @@
    </properties>
   </tile>
  </tileset>
+ <imagelayer name="parallax_01" width="20" height="15">
+  <image source="../img/area01_bkg0.png"/>
+  <properties>
+   <property name="ratio" value="0.25"/>
+  </properties>
+ </imagelayer>
+ <imagelayer name="parallax_02" width="20" height="15">
+  <image source="../img/area01_bkg1.png"/>
+  <properties>
+   <property name="ratio" value="0.35"/>
+  </properties>
+ </imagelayer>
  <layer name="background" width="20" height="15">
   <data encoding="base64">
    GQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgAAAAZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGAAAABkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYAAAAGQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgAAAAZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGAAAABkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYAAAAGQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAXAAAABAAAACoAAAAqAAAAKgAAACsAAAArAAAAFgAAAAAAAAAAAAAAAAAAABgAAAAZAAAAAAAAABcAAAArAAAAKwAAACsAAAAWAAAAAAAAAAAAAAAsAAAAAwAAAAMAAAApAAAAAwAAABkAAAAAAAAAAAAAAAAAAAAAAAAAGAAAABkAAAAAAAAAAAAAACwAAAAIAAAALQAAAAAAAAAAAAAAAAAAAAAAAAAsAAAACAAAAAgAAAAIAAAALQAAAAAAAAAAAAAAAAAAAAAAAAAYAAAAGQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgAAAAZAAAAAAAAAAAAAAAAAAAAAAAAABcAAAArAAAAKgAAACoAAAA+AAAAPgAAACoAAAA+AAAAKwAAACsAAAArAAAAFgAAAAAAAAAAAAAAGAAAABoAAAArAAAAPgAAACoAAAArAAAAKwAAAAMAAAADAAAAAwAAAAMAAAADAAAAAwAAAAMAAAADAAAAAwAAAAMAAAAEAAAABAAAAAQAAAAbAAAAAwAAAAMAAAADAAAAAwAAAAMAAAADAAAAAwAAAAMAAAADAAAAAwAAAAMAAAAGAAAABwAAAAMAAAADAAAAAwAAAAMAAAADAAAAAwAAAAMAAAADAAAAAwAAAAMAAAADAAAAAwAAAAMAAAADAAAAAwAAAAMAAAADAAAAAwAAAAMAAAADAAAAAwAAAAMAAAADAAAAAwAAAAMAAAADAAAAAwAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAADAAAA
@@ -29,6 +41,27 @@
    </properties>
   </object>
   <object x="137" y="192" width="1"/>
+  <object name="CoinEntity" x="384" y="160" width="32" height="32">
+   <properties>
+    <property name="image" value="spinning_coin_gold"/>
+    <property name="spritewidth" value="32"/>
+   </properties>
+  </object>
+  <object x="335" y="160" height="1"/>
+  <object name="CoinEntity" x="321" y="160" width="32" height="32">
+   <properties>
+    <property name="image" value="spinning_coin_gold"/>
+    <property name="spritewidth" value="32"/>
+   </properties>
+  </object>
+  <object name="EnemyEntity" x="192" y="256" width="320" height="64"/>
+  <object name="me.LevelEntity" x="576" y="320" width="32" height="32">
+   <properties>
+    <property name="duration" value="250"/>
+    <property name="fade" value="#000000"/>
+    <property name="to" value="area01"/>
+   </properties>
+  </object>
  </objectgroup>
  <layer name="foreground" width="20" height="15">
   <data encoding="base64">
