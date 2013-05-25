@@ -5162,5 +5162,10 @@
     <property name="image" value="orange"/>
    </properties>
   </object>
+  <object name="EnemyEntity" x="437" y="205" width="160" height="32">
+   <properties>
+    <property name="image" value="rot"/>
+   </properties>
+  </object>
  </objectgroup>
 </map>

@@ -28,7 +28,8 @@ var game = {
 		// Initialize melonJS and display a loading screen.
 		me.state.change(me.state.LOADING);
 
-		//me.debug.renderHitBox = true;
+		me.debug.renderHitBox = true;
+		me.debug.displayFPS = true;
 	},
 
 
@@ -40,6 +41,7 @@ var game = {
 
 		// add our player entity in the entity pool
 		me.entityPool.add("player", game.PlayerEntity);
+		me.entityPool.add("EnemyEntity", game.EnemyEntity);
 
 		// enable the keyboard
 		me.input.bindKey(me.input.KEY.A,  "left");

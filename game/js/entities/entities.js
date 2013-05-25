@@ -16,6 +16,10 @@ game.PlayerEntity = me.ObjectEntity.extend({
 		// adjust the bounding box
 		this.updateColRect(6, 20, -1, 0);
 
+		this.setFriction(0.1, 0);
+
+		this.maxVel.x = 4;
+
 		// set the display to follow our position on both axis
 		me.game.viewport.follow(this.pos, me.game.viewport.AXIS.BOTH);
 	},
@@ -38,7 +42,7 @@ game.PlayerEntity = me.ObjectEntity.extend({
 			// update the entity velocity
 			this.vel.x += this.accel.x * me.timer.tick;
 		} else {
-			this.vel.x = 0;
+		//	this.vel.x = 0;
 		}
 		if (me.input.isKeyPressed('jump')) {
 			// make sure we are not already jumping or falling
@@ -55,24 +59,20 @@ game.PlayerEntity = me.ObjectEntity.extend({
 		// check & update player movement
 		this.updateMovement();
 
-
 		// check for collision
 		var res = me.game.collide(this);
 
 		if (res) {
 			// if we collide with an enemy
 			if (res.obj.type == me.game.ENEMY_OBJECT) {
-				// check if we jumped on it
-				if ((res.y > 0) && ! this.jumping) {
-					// bounce (force jump)
-					this.falling = false;
-					this.vel.y = -this.maxVel.y * me.timer.tick;
-					// set the jumping flag
-					this.jumping = true;
-				} else {
-					// let's flicker in case we touched an enemy
-					this.renderable.flicker(45);
-				}
+				this.falling = false;
+				this.vel.y = -this.maxVel.y * me.timer.tick;
+				this.vel.x = (-this.maxVel.x * me.timer.tick) * (res.x > 0 ? 1:-1);
+				// set the jumping flag
+				this.jumping = true;
+				this.renderable.flicker(45);
+
+				me.game.viewport.shake(40, 500, me.game.viewport.AXIS.BOTH);
 			}
 		}
 
@@ -88,4 +88,76 @@ game.PlayerEntity = me.ObjectEntity.extend({
 		return false;
 	}
 
+});
+
+game.EnemyEntity = me.ObjectEntity.extend({
+	init: function(x, y, settings) {
+		// define this here instead of tiled
+		settings.image = "rot_big";
+		settings.spritewidth = 36;
+		settings.spriteheight = 36;
+
+		// call the parent constructor
+		this.parent(x, y, settings);
+
+		this.startX = x;
+		this.endX = x + settings.width - settings.spritewidth;
+		// size of sprite
+
+		// make him start from the right
+		this.pos.x = x + settings.width - settings.spritewidth;
+		this.walkLeft = true;
+
+		// walking & jumping speed
+		this.setVelocity(2, 6);
+
+		// make it collidable
+		this.collidable = true;
+		// make it a enemy object
+		this.type = me.game.ENEMY_OBJECT;
+
+	},
+
+	// call by the engine when colliding with another object
+	// obj parameter corresponds to the other object (typically the player) touching this one
+	onCollision: function(res, obj) {
+
+		// res.y >0 means touched by something on the bottom
+		// which mean at top position for this one
+		if (this.alive && (res.y > 0) && obj.falling) {
+			this.renderable.flicker(45);
+		}
+	},
+
+	// manage the enemy movement
+	update: function() {
+		// do nothing if not in viewport
+		if (!this.inViewport)
+			return false;
+
+		if (this.alive) {
+			if (this.walkLeft && this.pos.x <= this.startX) {
+				this.walkLeft = false;
+			} else if (!this.walkLeft && this.pos.x >= this.endX) {
+				this.walkLeft = true;
+			}
+			// make it walk
+			this.flipX(this.walkLeft);
+			this.vel.x += (this.walkLeft) ? -this.accel.x * me.timer.tick : this.accel.x * me.timer.tick;
+
+		} else {
+			this.vel.x = 0;
+		}
+
+		// check and update movement
+		this.updateMovement();
+
+		// update animation if necessary
+		if (this.vel.x !== 0 || this.vel.y !== 0) {
+			// update object animation
+			this.parent();
+			return true;
+		}
+		return false;
+	}
 });
