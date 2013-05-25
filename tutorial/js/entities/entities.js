@@ -1,6 +1,3 @@
-/*-------------------
-a player entity
--------------------------------- */
 game.PlayerEntity = me.ObjectEntity.extend({
 
 	/* -----
