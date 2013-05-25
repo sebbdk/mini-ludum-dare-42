@@ -17,6 +17,8 @@ game.resources = [
 	{name: "orange", type: "image", src: "data/img/orange.png"},
 	{name: "rot", type: "image", src: "data/img/rot.png"},
 	{name: "rot_big", type: "image", src: "data/img/rot_big.png"},
+	{name: "spike", type: "image", src: "data/img/spike.png"},
+	{name: "spike_big", type: "image", src: "data/img/spike_big.png"},
 	{name: "playermask", type: "image", src: "data/img/playermask.png"},
 
 	/* Maps.

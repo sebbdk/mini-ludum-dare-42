@@ -75,7 +75,7 @@ game.PlayerEntity = me.ObjectEntity.extend({
 
 		if (res) {
 			// if we collide with an enemy
-			if (res.obj.type == me.game.ENEMY_OBJECT) {
+			if (res.obj.type == me.game.ENEMY_OBJECT || res.obj.type == game.SpikeEntity.TYPE) {
 				this.falling = false;
 				this.vel.y = -this.maxVel.y * me.timer.tick;
 				this.vel.x = (-this.maxVel.x * me.timer.tick) * (res.x > 0 ? 1:-1);
@@ -116,6 +116,26 @@ game.PlayerEntity = me.ObjectEntity.extend({
 	}
 
 });
+
+game.SpikeEntity = me.ObjectEntity.extend({
+	init: function(x, y, settings) {
+		// define this here instead of tiled
+		settings.image = "spike_big";
+		settings.spritewidth = 44;
+		settings.spriteheight = 32;
+
+		// call the parent constructor
+		this.parent(x, y, settings);
+
+		// make it collidable
+		this.collidable = true;
+
+		// make it a enemy object
+		this.type = me.game.ENEMY_OBJECT;
+
+	}
+});
+game.SpikeEntity.TYPE = "spike";
 
 game.EnemyEntity = me.ObjectEntity.extend({
 	init: function(x, y, settings) {
