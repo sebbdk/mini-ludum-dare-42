@@ -5,6 +5,7 @@ game.resources = [
 	 * {name: "example", type:"image", src: "data/img/example.png"},
 	 */
 	{name: "tileset01", type:"image", src: "data/map/tileset01.png"},
+	{name: "metatiles32x32", type:"image", src: "data/map/metatiles32x32.png"},
 
 
 
