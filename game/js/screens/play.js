@@ -11,9 +11,9 @@ game.PlayScreen = me.ScreenObject.extend({
 	onResetEvent: function() {
 		me.levelDirector.loadLevel("level00");
 
-		if(this.mask === null && false) {
+		if(this.mask === null) {
 			this.mask = new me.SpriteObject (0, 0, me.loader.getImage("playermask"));
-			this.mask.alpha = 0.92;
+			this.mask.alpha = 0.95;
 			me.game.add(this.mask, 10000);
 		}
 	},
