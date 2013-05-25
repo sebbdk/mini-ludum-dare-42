@@ -15,6 +15,7 @@ game.resources = [
 	 */
 	{name: "orange", type: "image", src: "data/img/orange.png"},
 	{name: "rot", type: "image", src: "data/img/rot.png"},
+	{name: "playermask", type: "image", src: "data/img/playermask.png"},
 
 	/* Maps.
 	 * @example

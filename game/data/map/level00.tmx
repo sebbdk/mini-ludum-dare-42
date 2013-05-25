@@ -2346,7 +2346,7 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="0"/>
+   <tile gid="2"/>
    <tile gid="2"/>
    <tile gid="2"/>
    <tile gid="2"/>
@@ -4128,7 +4128,7 @@
    <tile gid="0"/>
   </data>
  </layer>
- <layer name="collision" width="64" height="16" visible="0">
+ <layer name="collision" width="64" height="16">
   <data>
    <tile gid="73"/>
    <tile gid="0"/>
@@ -4402,7 +4402,7 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="0"/>
+   <tile gid="74"/>
    <tile gid="74"/>
    <tile gid="74"/>
    <tile gid="74"/>
