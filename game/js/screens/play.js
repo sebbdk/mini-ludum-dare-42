@@ -14,8 +14,8 @@ game.PlayScreen = me.ScreenObject.extend({
 		if(this.mask === null) {
 			this.mask = new me.SpriteObject (0, 0, me.loader.getImage("playermask"));
 			this.mask.alpha = 0.95;
-			me.game.add(this.mask, 10000);
 		}
+		me.game.add(this.mask, 10000);
 	},
 
 	update: function() {
@@ -31,6 +31,7 @@ game.PlayScreen = me.ScreenObject.extend({
 	 *  action to perform when leaving this screen (state change)
 	 */
 	onDestroyEvent: function() {
-
+		var player = me.game.getEntityByName('player')[0];
+		player.panic = 1;
 	}
 });

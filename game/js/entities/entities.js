@@ -19,6 +19,7 @@ game.PlayerEntity = me.ObjectEntity.extend({
 		this.setFriction(0.2, 0);
 
 		this.maxVel.x = 4;
+		this.panic = 1;
 
 		// set the display to follow our position on both axis
 		me.game.viewport.follow(this.pos, me.game.viewport.AXIS.BOTH);
@@ -30,6 +31,12 @@ game.PlayerEntity = me.ObjectEntity.extend({
 
 	------ */
 	update: function() {
+
+		if( this.panic > 10 && this.alive) {
+			this.alive = false;
+			me.state.change(me.state.PLAY);
+		}
+
 
 		if (me.input.isKeyPressed('left')) {
 			// flip the sprite on horizontal axis
@@ -56,6 +63,10 @@ game.PlayerEntity = me.ObjectEntity.extend({
 
 		}
 
+		if(this.panic > 1) {
+			 this.panic -= 0.01;
+		}
+
 		// check & update player movement
 		this.updateMovement();
 
@@ -72,6 +83,9 @@ game.PlayerEntity = me.ObjectEntity.extend({
 				this.jumping = true;
 				this.renderable.flicker(45);
 
+				if(this.panic < 10) {
+					this.panic += 1;
+				}
 				me.game.viewport.shake(40, 500, me.game.viewport.AXIS.BOTH);
 			}
 		}
@@ -82,7 +96,7 @@ game.PlayerEntity = me.ObjectEntity.extend({
 				var dist = this.distanceTo(enemyEntitys[c]);
 
 				if(dist < 200 ) {
-					me.game.viewport.shake(4, 5, me.game.viewport.AXIS.BOTH);
+					me.game.viewport.shake(4*this.panic, 5, me.game.viewport.AXIS.BOTH);
 				}
 				//console.log("fark!");
 				//console.log(dist);
