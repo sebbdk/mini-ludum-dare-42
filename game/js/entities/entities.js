@@ -23,7 +23,7 @@ game.PlayerEntity = me.ObjectEntity.extend({
 		this.setVelocity(3, 15);
 
 		// adjust the bounding box
-		this.updateColRect(6, 20, -1, 0);
+		//this.updateColRect(6, 20, -1, 0);
 
 		this.setFriction(0.2, 0);
 
