@@ -11,6 +11,14 @@ game.PlayScreen = me.ScreenObject.extend({
 			this.mask = new me.SpriteObject (0, 0, me.loader.getImage("playermask"));
 			this.mask.alpha = 0.95;
 		}
+
+		if(me.game.currentLevel.light) {
+			this.mask.resize(1/this.mask.scale.x);
+			this.mask.resize(me.game.currentLevel.light);
+		} else {
+			this.mask.resize(1);
+		}
+
 		me.game.add(this.mask, 100);
 	},
 
@@ -18,7 +26,7 @@ game.PlayScreen = me.ScreenObject.extend({
 	 *  action to perform on state change
 	 */
 	onResetEvent: function() {
-		me.levelDirector.loadLevel("level01");
+		me.levelDirector.loadLevel("level04");
 		this.prepMask();
 	},
 

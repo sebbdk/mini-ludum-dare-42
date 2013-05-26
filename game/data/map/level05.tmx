@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" width="32" height="17" tilewidth="32" tileheight="32" backgroundcolor="#1f4e5c">
+<map version="1.0" orientation="orthogonal" width="32" height="16" tilewidth="32" tileheight="32" backgroundcolor="#1f4e5c">
  <properties>
-  <property name="light" value="2"/>
+  <property name="light" value="6"/>
  </properties>
  <tileset firstgid="1" name="tileset01" tilewidth="32" tileheight="32">
   <image source="tileset01.png" width="280" height="256"/>
@@ -19,52 +19,20 @@
    </properties>
   </tile>
  </tileset>
- <imagelayer name="parallax_02" width="32" height="17">
+ <imagelayer name="parallax_02" width="32" height="16">
   <image source="stars.png"/>
   <properties>
    <property name="ratio" value="0.15"/>
   </properties>
  </imagelayer>
- <imagelayer name="parralax_01" width="32" height="17">
+ <imagelayer name="parralax_01" width="32" height="16">
   <image source="clouds.png"/>
   <properties>
    <property name="ratio" value="0.25"/>
   </properties>
  </imagelayer>
- <layer name="bg" width="32" height="17">
+ <layer name="bg" width="32" height="16">
   <data>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -579,40 +547,8 @@
    <tile gid="0"/>
   </data>
  </layer>
- <layer name="ground" width="32" height="17">
+ <layer name="ground" width="32" height="16">
   <data>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
    <tile gid="7"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -1127,40 +1063,8 @@
    <tile gid="17"/>
   </data>
  </layer>
- <layer name="Tile Layer 2" width="32" height="17">
+ <layer name="Tile Layer 2" width="32" height="16">
   <data>
-   <tile gid="7"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -1675,7 +1579,7 @@
    <tile gid="0"/>
   </data>
  </layer>
- <layer name="Tile Layer 5" width="32" height="17">
+ <layer name="Tile Layer 5" width="32" height="16">
   <data>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -2113,39 +2017,7 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="38"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
+   <tile gid="37"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -2223,42 +2095,9 @@
    <tile gid="0"/>
   </data>
  </layer>
- <layer name="collision" width="32" height="17" visible="0">
+ <layer name="collision" width="32" height="16">
   <data>
    <tile gid="65"/>
-   <tile gid="65"/>
-   <tile gid="65"/>
-   <tile gid="65"/>
-   <tile gid="65"/>
-   <tile gid="65"/>
-   <tile gid="65"/>
-   <tile gid="65"/>
-   <tile gid="65"/>
-   <tile gid="65"/>
-   <tile gid="65"/>
-   <tile gid="65"/>
-   <tile gid="65"/>
-   <tile gid="65"/>
-   <tile gid="65"/>
-   <tile gid="65"/>
-   <tile gid="65"/>
-   <tile gid="65"/>
-   <tile gid="65"/>
-   <tile gid="65"/>
-   <tile gid="65"/>
-   <tile gid="65"/>
-   <tile gid="65"/>
-   <tile gid="65"/>
-   <tile gid="65"/>
-   <tile gid="65"/>
-   <tile gid="65"/>
-   <tile gid="65"/>
-   <tile gid="65"/>
-   <tile gid="65"/>
-   <tile gid="65"/>
-   <tile gid="65"/>
-   <tile gid="65"/>
-   <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -2290,37 +2129,6 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="65"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
    <tile gid="65"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -2352,7 +2160,7 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="0"/>
+   <tile gid="65"/>
    <tile gid="65"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -2384,7 +2192,7 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="0"/>
+   <tile gid="65"/>
    <tile gid="65"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -2416,7 +2224,7 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="0"/>
+   <tile gid="65"/>
    <tile gid="65"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -2448,7 +2256,7 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="0"/>
+   <tile gid="65"/>
    <tile gid="65"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -2480,7 +2288,7 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="0"/>
+   <tile gid="65"/>
    <tile gid="65"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -2512,7 +2320,7 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="0"/>
+   <tile gid="65"/>
    <tile gid="65"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -2544,7 +2352,7 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="0"/>
+   <tile gid="65"/>
    <tile gid="65"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -2576,7 +2384,7 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="0"/>
+   <tile gid="65"/>
    <tile gid="65"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -2608,7 +2416,39 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
+   <tile gid="65"/>
+   <tile gid="65"/>
    <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   <tile gid="65"/>
    <tile gid="65"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -2771,64 +2611,32 @@
    <tile gid="0"/>
   </data>
  </layer>
- <objectgroup name="objects" width="32" height="17">
-  <object name="player" x="96" y="447" width="32" height="32">
+ <objectgroup name="objects" width="32" height="16">
+  <object name="player" x="129" y="404" width="32" height="32">
    <properties>
     <property name="image" value="orange"/>
    </properties>
   </object>
-  <object name="SpikeEntity" x="513" y="447" width="32" height="32"/>
-  <object name="TextEntity" x="385" y="442" width="32" height="32">
+  <object name="EnemyEntity" x="627" y="467" width="228" height="40">
    <properties>
-    <property name="once" value="true"/>
-    <property name="text" value="Is that blood?"/>
+    <property name="image" value="rot"/>
    </properties>
   </object>
-  <object name="SpikeEntity" x="609" y="447" width="32" height="32"/>
-  <object name="SpikeEntity" x="704" y="448" width="32" height="32"/>
-  <object name="me.LevelEntity" x="0" y="384" width="32" height="96">
+  <object name="SpikeEntity" x="570" y="482" width="32" height="32"/>
+  <object name="TextEntity" x="41" y="408" width="32" height="32">
+   <properties>
+    <property name="text" value="I don't wanne go back in there"/>
+   </properties>
+  </object>
+  <object name="me.LevelEntity" x="993" y="351" width="32" height="96">
    <properties>
     <property name="duration" value="250"/>
     <property name="fade" value="#000000"/>
-    <property name="to" value="level01"/>
    </properties>
   </object>
-  <object name="me.LevelEntity" x="992" y="384" width="32" height="96">
+  <object name="TextEntity" x="641" y="414" width="32" height="32">
    <properties>
-    <property name="duration" value="250"/>
-    <property name="fade" value="#000000"/>
-    <property name="to" value="level03"/>
-   </properties>
-  </object>
-  <object name="TextEntity" x="560" y="440" width="32" height="32">
-   <properties>
-    <property name="text" value="This cannot be sanitary.."/>
-   </properties>
-  </object>
-  <object name="TextEntity" x="192" y="442" width="32" height="32">
-   <properties>
-    <property name="text" value="Sign: Danger ahead"/>
-   </properties>
-  </object>
-  <object name="TextEntity" x="657" y="440" width="32" height="32">
-   <properties>
-    <property name="text" value="almost there!"/>
-   </properties>
-  </object>
-  <object name="TextEntity" x="75" y="446" width="32" height="32">
-   <properties>
-    <property name="once" value="true"/>
-    <property name="text" value="Maybe this was a bad idea..."/>
-   </properties>
-  </object>
-  <object name="ShakeEntity" x="513" y="387" width="223" height="34">
-   <properties>
-    <property name="intensity" value="10"/>
-   </properties>
-  </object>
-  <object name="TextEntity" x="783" y="442" width="32" height="32">
-   <properties>
-    <property name="text" value="I made it!"/>
+    <property name="text" value="No more levels :'( , comment if you wan't more"/>
    </properties>
   </object>
  </objectgroup>

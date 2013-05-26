@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" width="32" height="32" tilewidth="32" tileheight="32" backgroundcolor="#1f4e5c">
+ <properties>
+  <property name="light" value="1"/>
+ </properties>
  <tileset firstgid="1" name="tileset01" tilewidth="32" tileheight="32">
   <image source="tileset01.png" width="280" height="256"/>
  </tileset>
@@ -6222,12 +6225,6 @@
     <property name="to" value="level03"/>
    </properties>
   </object>
-  <object name="EnemyEntity" x="687" y="408" width="159" height="28">
-   <properties>
-    <property name="image" value="rot"/>
-    <property name="still" value="false"/>
-   </properties>
-  </object>
   <object name="SpikeEntity" x="104" y="960" width="32" height="32"/>
   <object name="SpikeEntity" x="163" y="960" width="32" height="32"/>
   <object name="SpikeEntity" x="218" y="960" width="32" height="32"/>
@@ -6278,7 +6275,7 @@
     <property name="text" value="What the heck is that!"/>
    </properties>
   </object>
-  <object name="TextEntity" x="685" y="411" width="32" height="32">
+  <object name="TextEntity" x="686" y="414" width="32" height="32">
    <properties>
     <property name="once" value="false"/>
     <property name="text" value="shit! shit! shit!"/>
@@ -6291,12 +6288,24 @@
     <property name="text" value="Why do i keep going towards danger?"/>
    </properties>
   </object>
+  <object name="SpikeEntity" x="639" y="416" width="32" height="32"/>
+  <object name="SpikeEntity" x="737" y="416" width="32" height="32"/>
+  <object name="SpikeEntity" x="817" y="416" width="32" height="32"/>
  </objectgroup>
  <objectgroup name="sensor_objects" width="32" height="32">
-  <object name="ShakeEntity" x="362" y="205" width="123" height="80"/>
+  <object name="ShakeEntity" x="630" y="337" width="212" height="72">
+   <properties>
+    <property name="intensity" value="60"/>
+   </properties>
+  </object>
   <object name="ShakeEntity" x="398" y="309" width="99" height="73">
    <properties>
     <property name="intensity" value="10"/>
+   </properties>
+  </object>
+  <object name="ShakeEntity" x="361" y="194" width="114" height="96">
+   <properties>
+    <property name="intensity" value="40"/>
    </properties>
   </object>
  </objectgroup>
