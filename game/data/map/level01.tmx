@@ -2783,13 +2783,13 @@
   <object name="TextEntity" x="863" y="452" width="32" height="32">
    <properties>
     <property name="once" value="false"/>
-    <property name="text" value="Sign: This way to salvation!"/>
+    <property name="text" value="Sign: This way to doooom!"/>
    </properties>
   </object>
   <object name="TextEntity" x="416" y="442" width="32" height="32">
    <properties>
     <property name="once" value="true"/>
-    <property name="text" value="wait, that can't be right.."/>
+    <property name="text" value="wait.. that can't be right"/>
    </properties>
   </object>
   <object name="me.LevelEntity" x="992" y="384" width="32" height="96">

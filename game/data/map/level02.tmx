@@ -2799,7 +2799,7 @@
   </object>
   <object name="TextEntity" x="472" y="437" width="32" height="32">
    <properties>
-    <property name="text" value="I dont really wanna touch those"/>
+    <property name="text" value="This cannot be sanitary.."/>
    </properties>
   </object>
   <object name="TextEntity" x="192" y="442" width="32" height="32">
@@ -2809,12 +2809,18 @@
   </object>
   <object name="TextEntity" x="839" y="443" width="32" height="32">
    <properties>
-    <property name="text" value="I wonder where the others are .."/>
+    <property name="text" value="I wonder where the others whent..."/>
    </properties>
   </object>
   <object name="TextEntity" x="515" y="423" width="32" height="32">
    <properties>
     <property name="text" value="aaah!"/>
+   </properties>
+  </object>
+  <object name="TextEntity" x="75" y="446" width="32" height="32">
+   <properties>
+    <property name="once" value="true"/>
+    <property name="text" value="Maybe this was a bad idea..."/>
    </properties>
   </object>
  </objectgroup>

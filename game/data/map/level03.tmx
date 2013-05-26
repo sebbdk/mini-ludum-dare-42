@@ -3134,7 +3134,7 @@
   <object name="TextEntity" x="162" y="412" width="32" height="32">
    <properties>
     <property name="once" value="true"/>
-    <property name="text" value="More of these... things"/>
+    <property name="text" value="How did i get here again?"/>
    </properties>
   </object>
   <object name="me.LevelEntity" x="0" y="352" width="32" height="96">
