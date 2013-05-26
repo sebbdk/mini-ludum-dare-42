@@ -30,7 +30,7 @@ game.PlayerEntity = me.ObjectEntity.extend({
 	},
 
 	update: function() {
-		if( this.panic > 2 && this.alive) {
+		if( this.panic > 6 && this.alive) {
 			this.alive = false;
 			me.levelDirector.reloadLevel(true);
 			return;
@@ -100,7 +100,7 @@ game.PlayerEntity = me.ObjectEntity.extend({
 				this.renderable.flicker(45);
 
 				if(this.panic < 10) {
-					this.panic += 1;
+					this.panic += 3;
 				}
 				me.game.viewport.shake(40, 500, me.game.viewport.AXIS.BOTH);
 			}

@@ -3476,6 +3476,7 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
+   <tile gid="0"/>
    <tile gid="2147483686"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -3496,7 +3497,6 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="0"/>
    <tile gid="6"/>
    <tile gid="7"/>
    <tile gid="0"/>
@@ -3547,7 +3547,7 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="0"/>
+   <tile gid="37"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -4584,7 +4584,7 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="37"/>
+   <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -6197,7 +6197,7 @@
   </data>
  </layer>
  <objectgroup name="objects" width="32" height="32">
-  <object name="player" x="46" y="212" width="32" height="32">
+  <object name="player" x="106" y="207" width="32" height="32">
    <properties>
     <property name="image" value="orange"/>
    </properties>
@@ -6209,7 +6209,7 @@
    </properties>
   </object>
   <object name="SpikeEntity" x="40" y="960" width="32" height="32"/>
-  <object name="TextEntity" x="320" y="352" width="32" height="32">
+  <object name="TextEntity" x="354" y="350" width="32" height="32">
    <properties>
     <property name="once" value="false"/>
     <property name="text" value="Sign: Take a leap of faith"/>
@@ -6222,7 +6222,7 @@
     <property name="to" value="level03"/>
    </properties>
   </object>
-  <object name="EnemyEntity" x="549" y="410" width="244" height="29">
+  <object name="EnemyEntity" x="687" y="408" width="159" height="28">
    <properties>
     <property name="image" value="rot"/>
     <property name="still" value="false"/>
@@ -6240,7 +6240,7 @@
     <property name="to" value="level05"/>
    </properties>
   </object>
-  <object name="TextEntity" x="829" y="413" width="32" height="32">
+  <object name="TextEntity" x="545" y="411" width="32" height="32">
    <properties>
     <property name="once" value="false"/>
     <property name="text" value="Sign: You should not trust these signs"/>
@@ -6260,13 +6260,13 @@
   </object>
   <object name="SpikeEntity" x="389" y="672" width="32" height="32"/>
   <object name="SpikeEntity" x="479" y="672" width="32" height="32"/>
-  <object name="TextEntity" x="859" y="571" width="32" height="32">
+  <object name="TextEntity" x="835" y="566" width="32" height="32">
    <properties>
     <property name="once" value="false"/>
-    <property name="text" value="No shit sherlock..."/>
+    <property name="text" value="Was that a zombie-donut?!"/>
    </properties>
   </object>
-  <object name="TextEntity" x="897" y="955" width="32" height="32">
+  <object name="TextEntity" x="933" y="955" width="32" height="32">
    <properties>
     <property name="once" value="false"/>
     <property name="text" value="Finaly!"/>
@@ -6278,10 +6278,17 @@
     <property name="text" value="What the heck is that!"/>
    </properties>
   </object>
-  <object name="TextEntity" x="597" y="410" width="32" height="32">
+  <object name="TextEntity" x="685" y="411" width="32" height="32">
    <properties>
     <property name="once" value="false"/>
     <property name="text" value="shit! shit! shit!"/>
+   </properties>
+  </object>
+  <object name="SpikeEntity" x="396" y="960" width="32" height="32"/>
+  <object name="TextEntity" x="107" y="218" width="32" height="32">
+   <properties>
+    <property name="once" value="false"/>
+    <property name="text" value="Why do i keep going towards danger?"/>
    </properties>
   </object>
  </objectgroup>
