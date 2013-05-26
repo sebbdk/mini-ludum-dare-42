@@ -64,7 +64,7 @@ game.PlayerEntity = me.ObjectEntity.extend({
 		}
 
 		if(this.panic > 1) {
-			 this.panic -= 0.01;
+			this.panic -= 0.01;
 		}
 
 		// check & update player movement
@@ -163,6 +163,8 @@ game.EnemyEntity = me.ObjectEntity.extend({
 		// make it a enemy object
 		this.type = me.game.ENEMY_OBJECT;
 
+		this.lastHiss = me.timer.getTime();
+
 	},
 
 	// call by the engine when colliding with another object
@@ -178,6 +180,7 @@ game.EnemyEntity = me.ObjectEntity.extend({
 
 	// manage the enemy movement
 	update: function() {
+		var _self = this;
 		// do nothing if not in viewport
 		if (!this.inViewport)
 			return false;
@@ -194,6 +197,12 @@ game.EnemyEntity = me.ObjectEntity.extend({
 
 		} else {
 			this.vel.x = 0;
+		}
+
+		var player = me.game.getEntityByName('player')[0];
+		if(player && this.distanceTo(player) < 150 && me.timer.getTime()-4000 > this.lastHiss ) {
+			this.lastHiss = me.timer.getTime();
+			me.audio.play("hiss0" + Math.ceil(Math.random() * 3));
 		}
 
 		// check and update movement

@@ -3,6 +3,7 @@ game.PlayScreen = me.ScreenObject.extend({
 	init: function() {
 		this.parent(true);
 		this.mask = null;
+		me.audio.playTrack("bgm");
 	},
 
 	/**

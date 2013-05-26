@@ -7,9 +7,6 @@ game.resources = [
 	{name: "tileset01", type:"image", src: "data/map/tileset01.png"},
 	{name: "metatiles32x32", type:"image", src: "data/map/metatiles32x32.png"},
 
-
-
-
 	/* Atlases
 	 * @example
 	 * {name: "example_tps", type: "tps", src: "data/img/example_tps.json"},
@@ -26,15 +23,20 @@ game.resources = [
 	 * {name: "example01", type: "tmx", src: "data/map/example01.tmx"},
 	 * {name: "example01", type: "tmx", src: "data/map/example01.json"},
 	 */
-	{name: "level00", type: "tmx", src: "data/map/level00.tmx"}
+	{name: "level00", type: "tmx", src: "data/map/level00.tmx"},
 
 	/* Background music.
 	 * @example
 	 * {name: "example_bgm", type: "audio", src: "data/bgm/", channel : 1},
 	 */
+	{name: "bgm", type: "audio", src: "data/sfx/", channel : 1},
 
 	/* Sound effects.
 	 * @example
 	 * {name: "example_sfx", type: "audio", src: "data/sfx/", channel : 2}
 	 */
+	{name: "hiss01", type: "audio", src: "data/sfx/", channel : 1},
+	{name: "hiss02", type: "audio", src: "data/sfx/", channel : 1},
+	{name: "hiss03", type: "audio", src: "data/sfx/", channel : 1}
+
 ];
