@@ -91,7 +91,7 @@ game.PlayerEntity = me.ObjectEntity.extend({
 
 		if (res) {
 			// if we collide with an enemy
-			if (res.obj.type == me.game.ENEMY_OBJECT || res.obj.type == game.SpikeEntity.TYPE) {
+			if (res.obj.type == me.game.ENEMY_OBJECT ) {
 				this.falling = false;
 				this.vel.y = -this.maxVel.y * me.timer.tick;
 				this.vel.x = (-this.maxVel.x * me.timer.tick) * (res.x > 0 ? 1:-1);

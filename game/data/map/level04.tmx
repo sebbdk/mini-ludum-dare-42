@@ -6197,7 +6197,7 @@
   </data>
  </layer>
  <objectgroup name="objects" width="32" height="32">
-  <object name="player" x="106" y="207" width="32" height="32">
+  <object name="player" x="116" y="207" width="32" height="32">
    <properties>
     <property name="image" value="orange"/>
    </properties>
@@ -6285,7 +6285,7 @@
    </properties>
   </object>
   <object name="SpikeEntity" x="396" y="960" width="32" height="32"/>
-  <object name="TextEntity" x="107" y="218" width="32" height="32">
+  <object name="TextEntity" x="116" y="218" width="32" height="32">
    <properties>
     <property name="once" value="false"/>
     <property name="text" value="Why do i keep going towards danger?"/>
