@@ -30,7 +30,7 @@ game.PlayerEntity = me.ObjectEntity.extend({
 	},
 
 	update: function() {
-		if( this.panic > 10 && this.alive) {
+		if( this.panic > 2 && this.alive) {
 			this.alive = false;
 			me.levelDirector.reloadLevel(true);
 			return;
@@ -205,6 +205,7 @@ game.EnemyEntity = me.ObjectEntity.extend({
 		settings.image = "rot_big";
 		settings.spritewidth = 36;
 		settings.spriteheight = 36;
+		this.still = settings.still;
 
 		// call the parent constructor
 		this.parent(x, y, settings);
@@ -215,10 +216,12 @@ game.EnemyEntity = me.ObjectEntity.extend({
 
 		// make him start from the right
 		this.pos.x = x + settings.width - settings.spritewidth;
-		this.walkLeft = true;
+		this.walkLeft = false;
 
 		// walking & jumping speed
 		this.setVelocity(2, 6);
+
+		this.flipX(true);
 
 		// make it collidable
 		this.collidable = true;
@@ -247,7 +250,7 @@ game.EnemyEntity = me.ObjectEntity.extend({
 		if (!this.inViewport)
 			return false;
 
-		if (this.alive) {
+		if (this.alive  && !this.still) {
 			if (this.walkLeft && this.pos.x <= this.startX) {
 				this.walkLeft = false;
 			} else if (!this.walkLeft && this.pos.x >= this.endX) {
