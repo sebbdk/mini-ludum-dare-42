@@ -2612,7 +2612,7 @@
   </data>
  </layer>
  <objectgroup name="objects" width="32" height="16">
-  <object name="player" x="129" y="404" width="32" height="32">
+  <object name="player" x="128" y="411" width="32" height="32">
    <properties>
     <property name="image" value="orange"/>
    </properties>
@@ -2623,7 +2623,7 @@
    </properties>
   </object>
   <object name="SpikeEntity" x="570" y="482" width="32" height="32"/>
-  <object name="TextEntity" x="41" y="408" width="32" height="32">
+  <object name="TextEntity" x="65" y="410" width="32" height="32">
    <properties>
     <property name="text" value="I don't wanne go back in there"/>
    </properties>

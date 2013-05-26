@@ -21,7 +21,7 @@ game.PlayerEntity = me.ObjectEntity.extend({
 
 		this.setFriction(0.5, 0);
 
-		this.maxVel.x = 4;
+		this.maxVel.x = 3;
 		this.panic = 1;
 
 		// set the display to follow our position on both axis
