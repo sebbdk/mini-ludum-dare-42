@@ -2777,6 +2777,7 @@
   <object name="SpikeEntity" x="513" y="447" width="32" height="32"/>
   <object name="TextEntity" x="385" y="442" width="32" height="32">
    <properties>
+    <property name="once" value="true"/>
     <property name="text" value="Is that blood?"/>
    </properties>
   </object>
@@ -2793,7 +2794,7 @@
    <properties>
     <property name="duration" value="250"/>
     <property name="fade" value="#000000"/>
-    <property name="to" value="level01"/>
+    <property name="to" value="level03"/>
    </properties>
   </object>
   <object name="TextEntity" x="472" y="437" width="32" height="32">
@@ -2804,6 +2805,16 @@
   <object name="TextEntity" x="192" y="442" width="32" height="32">
    <properties>
     <property name="text" value="Sign: Danger ahead"/>
+   </properties>
+  </object>
+  <object name="TextEntity" x="839" y="443" width="32" height="32">
+   <properties>
+    <property name="text" value="I wonder where the others are .."/>
+   </properties>
+  </object>
+  <object name="TextEntity" x="515" y="423" width="32" height="32">
+   <properties>
+    <property name="text" value="aaah!"/>
    </properties>
   </object>
  </objectgroup>

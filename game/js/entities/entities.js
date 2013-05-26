@@ -138,7 +138,7 @@ game.TextEntity = me.ObjectEntity.extend({
 		this.parent(x, y, settings);
 
 		this.text = settings.text;
-		this.once = settings.once !== undefined ? false:true;
+		this.once = settings.once;
 		this.shown = false;
 
 		// make it collidable
@@ -190,6 +190,7 @@ game.SpikeEntity = me.ObjectEntity.extend({
 
 		// make it collidable
 		this.collidable = true;
+		this.updateColRect(2, 40, 2, 30);
 
 		// make it a enemy object
 		this.type = me.game.ENEMY_OBJECT;

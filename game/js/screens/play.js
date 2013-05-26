@@ -11,7 +11,7 @@ game.PlayScreen = me.ScreenObject.extend({
 			this.mask = new me.SpriteObject (0, 0, me.loader.getImage("playermask"));
 			this.mask.alpha = 0.95;
 		}
-		me.game.add(this.mask, 10);
+		me.game.add(this.mask, 100);
 	},
 
 	/**

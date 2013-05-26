@@ -2788,6 +2788,7 @@
   </object>
   <object name="TextEntity" x="416" y="442" width="32" height="32">
    <properties>
+    <property name="once" value="true"/>
     <property name="text" value="wait, that can't be right.."/>
    </properties>
   </object>
