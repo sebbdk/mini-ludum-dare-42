@@ -26,13 +26,21 @@ game.PlayerEntity = me.ObjectEntity.extend({
 
 		// set the display to follow our position on both axis
 		me.game.viewport.follow(this.pos, me.game.viewport.AXIS.BOTH);
+		me.state.current().prepMask();
 	},
 
 	update: function() {
-
 		if( this.panic > 10 && this.alive) {
 			this.alive = false;
-			me.state.change(me.state.PLAY);
+			me.levelDirector.reloadLevel(true);
+			return;
+		}
+
+		var mask = me.state.current().mask;
+		if(mask !== null) {
+			var player = me.game.getEntityByName('player')[0];
+			mask.pos.x = player.pos.x - (mask.width/2) + player.width/2;
+			mask.pos.y = player.pos.y - (mask.height/2) + player.height/2;
 		}
 
 
@@ -136,11 +144,36 @@ game.TextEntity = me.ObjectEntity.extend({
 		// make it collidable
 		this.collidable = true;
 
+		this.font = new me.Font('Arial', 14, "#ffffff");
+		me.game.add(this.font, 11);
 	},
 	onCollision : function() {
 		if(!this.once || (this.once && !this.shown) ) {
-			me.state.current().setText(this.text);
+			this.setText(this.text);
 			this.shown = true;
+			this.allowDraw = true;
+			if(me.state.current().currentText && me.state.current().currentText !== this ) {
+				me.state.current().currentText.allowDraw = false;
+			}
+			me.state.current().currentText = this;
+		}
+	},
+	onDestroyEvent:function() {
+		this.shown = false;
+	},
+	setText: function(text) {
+		this.text = text;
+		this.tw = null;
+		this.showTime = me.timer.getTime();
+	},
+	draw: function(context) {
+		if(me.timer.getTime()-1500 < this.showTime && this.allowDraw === true) {
+			if(!this.tw) {
+				this.tw= this.font.measureText(context, this.text);
+			}
+
+			var player = me.game.getEntityByName('player')[0];
+			this.font.draw(context, this.text, (player.pos.x+player.width/2)-this.tw.width/2, player.pos.y - 20);
 		}
 	}
 });
