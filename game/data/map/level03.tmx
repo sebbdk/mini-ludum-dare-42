@@ -151,16 +151,16 @@
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
-   <tile gid="0"/>
+   <tile gid="12"/>
+   <tile gid="12"/>
+   <tile gid="12"/>
+   <tile gid="12"/>
+   <tile gid="12"/>
+   <tile gid="12"/>
+   <tile gid="12"/>
+   <tile gid="12"/>
+   <tile gid="12"/>
+   <tile gid="12"/>
    <tile gid="0"/>
    <tile gid="0"/>
    <tile gid="0"/>
@@ -3134,10 +3134,10 @@
    </properties>
   </object>
   <object name="SpikeEntity" x="256" y="416" width="32" height="32"/>
-  <object name="TextEntity" x="162" y="412" width="32" height="32">
+  <object name="TextEntity" x="70" y="412" width="32" height="32">
    <properties>
     <property name="once" value="true"/>
-    <property name="text" value="How did i get here again?"/>
+    <property name="text" value="Phew, gotta calm down.."/>
    </properties>
   </object>
   <object name="me.LevelEntity" x="0" y="352" width="32" height="96">
@@ -3185,6 +3185,12 @@
    <properties>
     <property name="once" value="false"/>
     <property name="text" value="Sign: Up, up and away!"/>
+   </properties>
+  </object>
+  <object name="TextEntity" x="227" y="374" width="35" height="75">
+   <properties>
+    <property name="once" value="true"/>
+    <property name="text" value="Ga'h more of this?!"/>
    </properties>
   </object>
  </objectgroup>
