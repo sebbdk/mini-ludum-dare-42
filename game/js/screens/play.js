@@ -3,7 +3,7 @@ game.PlayScreen = me.ScreenObject.extend({
 	init: function() {
 		this.parent(true);
 		this.mask = null;
-		me.audio.playTrack("bgm");
+		//me.audio.playTrack("bgm");
 
 		this.font = new me.Font('Arial', 14, "#ffffff");
 		me.game.add(this.font, 11);

@@ -1,11 +1,5 @@
 game.PlayerEntity = me.ObjectEntity.extend({
 
-	/* -----
-
-	constructor
-
-	------ */
-
 	init: function(x, y, settings) {
 		settings.spritewidth = 22;
 		settings.spriteheight = 34;
@@ -34,11 +28,6 @@ game.PlayerEntity = me.ObjectEntity.extend({
 		me.game.viewport.follow(this.pos, me.game.viewport.AXIS.BOTH);
 	},
 
-	/* -----
-
-	update the player pos
-
-	------ */
 	update: function() {
 
 		if( this.panic > 10 && this.alive) {
