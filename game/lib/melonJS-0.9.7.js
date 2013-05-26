@@ -10157,7 +10157,6 @@ var me = me || {};
 		 * @return {String} CSS color string in rgb() or rgba() format
 		 */
 		api.HexToRGB = function(h, a) {
-			console.log(h);
 			if (h.charAt(0) !== "#") {
 				// this is not a hexadecimal string
 				return h;

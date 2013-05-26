@@ -130,7 +130,7 @@ game.TextEntity = me.ObjectEntity.extend({
 		this.parent(x, y, settings);
 
 		this.text = settings.text;
-		this.once = settings.once ? settings.once:true;
+		this.once = settings.once !== undefined ? false:true;
 		this.shown = false;
 
 		// make it collidable
@@ -138,7 +138,7 @@ game.TextEntity = me.ObjectEntity.extend({
 
 	},
 	onCollision : function() {
-		if(this.once && !this.shown) {
+		if(!this.once || (this.once && !this.shown) ) {
 			me.state.current().setText(this.text);
 			this.shown = true;
 		}
