@@ -2812,7 +2812,7 @@
     <property name="text" value="I wonder where the others whent..."/>
    </properties>
   </object>
-  <object name="TextEntity" x="515" y="423" width="32" height="32">
+  <object name="TextEntity" x="526" y="412" width="32" height="32">
    <properties>
     <property name="text" value="aaah!"/>
    </properties>
