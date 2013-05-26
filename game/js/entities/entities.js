@@ -133,6 +133,23 @@ game.PlayerEntity = me.ObjectEntity.extend({
 
 });
 
+game.ShakeEntity = me.ObjectEntity.extend({
+	init:function(x, y, settings) {
+		this.parent(x, y, settings);
+		this.collidable = true;
+		this.once = settings.once;
+		this.intensity = settings.intensity ? settings.intensity:40;
+		this.duration = settings.duration ? settings.duration:250;
+		this.triggered = false;
+	},
+	onCollision : function() {
+		if(!this.once || (this.once && !this.triggered) ) {
+			this.triggered = true;
+			me.game.viewport.shake(this.intensity, this.duration, me.game.viewport.AXIS.BOTH);
+		}
+	}
+});
+
 game.TextEntity = me.ObjectEntity.extend({
 	init: function(x, y, settings) {
 		this.parent(x, y, settings);

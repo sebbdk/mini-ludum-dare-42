@@ -2797,7 +2797,7 @@
     <property name="to" value="level03"/>
    </properties>
   </object>
-  <object name="TextEntity" x="472" y="437" width="32" height="32">
+  <object name="TextEntity" x="560" y="440" width="32" height="32">
    <properties>
     <property name="text" value="This cannot be sanitary.."/>
    </properties>
@@ -2807,20 +2807,25 @@
     <property name="text" value="Sign: Danger ahead"/>
    </properties>
   </object>
-  <object name="TextEntity" x="839" y="443" width="32" height="32">
+  <object name="TextEntity" x="657" y="440" width="32" height="32">
    <properties>
-    <property name="text" value="I wonder where the others whent..."/>
-   </properties>
-  </object>
-  <object name="TextEntity" x="526" y="412" width="32" height="32">
-   <properties>
-    <property name="text" value="aaah!"/>
+    <property name="text" value="almost there!"/>
    </properties>
   </object>
   <object name="TextEntity" x="75" y="446" width="32" height="32">
    <properties>
     <property name="once" value="true"/>
     <property name="text" value="Maybe this was a bad idea..."/>
+   </properties>
+  </object>
+  <object name="ShakeEntity" x="513" y="387" width="223" height="34">
+   <properties>
+    <property name="intensity" value="10"/>
+   </properties>
+  </object>
+  <object name="TextEntity" x="783" y="442" width="32" height="32">
+   <properties>
+    <property name="text" value="I made it!"/>
    </properties>
   </object>
  </objectgroup>

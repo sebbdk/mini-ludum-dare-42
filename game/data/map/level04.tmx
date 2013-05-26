@@ -6196,7 +6196,7 @@
    <tile gid="65"/>
   </data>
  </layer>
- <objectgroup name="objects" width="32" height="32">
+ <objectgroup name="creature_objects" width="32" height="32">
   <object name="player" x="116" y="207" width="32" height="32">
    <properties>
     <property name="image" value="orange"/>
@@ -6269,10 +6269,10 @@
   <object name="TextEntity" x="933" y="955" width="32" height="32">
    <properties>
     <property name="once" value="false"/>
-    <property name="text" value="Finaly!"/>
+    <property name="text" value="A way out!"/>
    </properties>
   </object>
-  <object name="TextEntity" x="351" y="221" width="32" height="32">
+  <object name="TextEntity" x="325" y="221" width="32" height="32">
    <properties>
     <property name="once" value="false"/>
     <property name="text" value="What the heck is that!"/>
@@ -6289,6 +6289,14 @@
    <properties>
     <property name="once" value="false"/>
     <property name="text" value="Why do i keep going towards danger?"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="sensor_objects" width="32" height="32">
+  <object name="ShakeEntity" x="362" y="205" width="123" height="80"/>
+  <object name="ShakeEntity" x="398" y="309" width="99" height="73">
+   <properties>
+    <property name="intensity" value="10"/>
    </properties>
   </object>
  </objectgroup>
