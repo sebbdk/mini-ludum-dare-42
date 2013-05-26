@@ -7,8 +7,17 @@ game.PlayerEntity = me.ObjectEntity.extend({
 	------ */
 
 	init: function(x, y, settings) {
+		settings.spritewidth = 22;
+		settings.spriteheight = 34;
+
 		// call the constructor
 		this.parent(x, y, settings);
+
+		this.renderable.addAnimation('walk', [0,1,2]);
+		this.renderable.addAnimation('excited', [3]);
+		this.renderable.addAnimation('still', [4]);
+
+		this.renderable.setCurrentAnimation('walk');
 
 		// set the default horizontal & vertical speed (accel vector)
 		this.setVelocity(3, 15);
@@ -61,6 +70,16 @@ game.PlayerEntity = me.ObjectEntity.extend({
 				this.jumping = true;
 			}
 
+		}
+
+		if(this.vel.x === 0) {
+			if(this.panic < 2) {
+				this.renderable.setCurrentAnimation('still');
+			} else {
+				this.renderable.setCurrentAnimation('excited');
+			}
+		} else {
+			this.renderable.setCurrentAnimation('walk');
 		}
 
 		if(this.panic > 1) {

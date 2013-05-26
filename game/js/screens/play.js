@@ -4,6 +4,28 @@ game.PlayScreen = me.ScreenObject.extend({
 		this.parent(true);
 		this.mask = null;
 		me.audio.playTrack("bgm");
+
+		this.font = new me.Font('Arial', 14, "FFFFFF");
+		me.game.add(this.font, 11);
+		this.showTime = me.timer.getTime();
+		this.setText("hello motherfucker!");
+	},
+
+	setText: function(text) {
+		this.text = text;
+		this.tw = null;
+		this.showTime = me.timer.getTime();
+	},
+
+	draw: function(context) {
+		if(me.timer.getTime()-1500 < this.showTime) {
+			if(!this.tw) {
+				this.tw= this.font.measureText(context, this.text);
+			}
+
+			var player = me.game.getEntityByName('player')[0];
+			this.font.draw(context, this.text, (player.pos.x+player.width/2)-this.tw.width/2, player.pos.y - 20);
+		}
 	},
 
 	/**
@@ -16,7 +38,7 @@ game.PlayScreen = me.ScreenObject.extend({
 			this.mask = new me.SpriteObject (0, 0, me.loader.getImage("playermask"));
 			this.mask.alpha = 0.95;
 		}
-		me.game.add(this.mask, 10000);
+		me.game.add(this.mask, 10);
 	},
 
 	update: function() {

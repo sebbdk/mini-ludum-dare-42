@@ -17,6 +17,7 @@ game.resources = [
 	{name: "spike", type: "image", src: "data/img/spike.png"},
 	{name: "spike_big", type: "image", src: "data/img/spike_big.png"},
 	{name: "playermask", type: "image", src: "data/img/playermask.png"},
+	{name: "png_font", type: "image", src: "data/img/font/minecraftia.png"},
 
 	/* Maps.
 	 * @example
