@@ -125,6 +125,26 @@ game.PlayerEntity = me.ObjectEntity.extend({
 
 });
 
+game.TextEntity = me.ObjectEntity.extend({
+	init: function(x, y, settings) {
+		this.parent(x, y, settings);
+
+		this.text = settings.text;
+		this.once = settings.once ? settings.once:true;
+		this.shown = false;
+
+		// make it collidable
+		this.collidable = true;
+
+	},
+	onCollision : function() {
+		if(this.once && !this.shown) {
+			me.state.current().setText(this.text);
+			this.shown = true;
+		}
+	}
+});
+
 game.SpikeEntity = me.ObjectEntity.extend({
 	init: function(x, y, settings) {
 		// define this here instead of tiled

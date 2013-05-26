@@ -7,8 +7,6 @@ game.PlayScreen = me.ScreenObject.extend({
 
 		this.font = new me.Font('Arial', 14, "#ffffff");
 		me.game.add(this.font, 11);
-		this.showTime = me.timer.getTime();
-		this.setText("hello motherfucker!");
 	},
 
 	setText: function(text) {
